@@ -108,15 +108,8 @@ bullishBreakout = close > high[1]
 bearishBreakdown = close < low[1]
 
 // === Buy/Sell Conditions ===
-longCondition = close > emaFast and close > emaSlow and
-    macdLine > signalLine and macdHist > 0 and
-    rsi > 55 and k > d and close > basis and
-    volume > volAvg and bullishBreakout
-
-shortCondition = close < emaFast and close < emaSlow and
-    macdLine < signalLine and macdHist < 0 and
-    rsi < 45 and k < d and close < basis and
-    volume > volAvg and bearishBreakdown
+longCondition = close > emaFast and close > emaSlow and macdLine > signalLine and macdHist > 0 and rsi > 55 and k > d and close > basis and volume > volAvg and bullishBreakout
+shortCondition = close < emaFast and close < emaSlow and macdLine < signalLine and macdHist < 0 and rsi < 45 and k < d and close < basis and volume > volAvg and bearishBreakdown
 
 // === Plot EMAs and Bollinger Bands ===
 plot(emaFast, title="EMA 50", color=color.orange)
@@ -169,4 +162,4 @@ if (shortCondition)
 <footer style="text-align: center; padding: 20px; margin-top: 40px; background-color: #2d2d2d; color: #ccc; font-family: Arial, sans-serif; font-size: 14px;">
   This site is created by <strong>Philus Roffa</strong>
 </footer>
-</html>
+                         </html>
